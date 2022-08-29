@@ -183,7 +183,7 @@ body {
 
 
 #cover {
-    background: #222 url('img/air.jpg') center center no-repeat;
+    background: #222 url('/air.jpg') center center no-repeat;
     background-size: cover;
     height: 500px;
     text-align: center;

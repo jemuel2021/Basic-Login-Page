@@ -1,17 +1,18 @@
   // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCiNNAyG6ussU2-gtEt6pnStPwoDt4IZvw",
-    authDomain: "form-d7245.firebaseapp.com",
-    databaseURL: "https://form-d7245.firebaseio.com",
-    projectId: "form-d7245",
-    storageBucket: "form-d7245.appspot.com",
-    messagingSenderId: "12661355616",
-    appId: "1:12661355616:web:fee6112ea9a28dde4bbf05"
+  const firebaseConfig = {
+    apiKey: "AIzaSyB7bPblrzZGlWMblWaVi1V1BoTwh92XEXo",
+    authDomain: "lasthome12-360f6.firebaseapp.com",
+    databaseURL: "https://lasthome12-360f6-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "lasthome12-360f6",
+    storageBucket: "lasthome12-360f6.appspot.com",
+    messagingSenderId: "541168511349",
+    appId: "1:541168511349:web:17c1519f2617145af70b3c",
+    measurementId: "G-NH3JX38VHB"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  const auth =firebase.auth();
+  const auth = firebase.auth();
 
   function signUp() {
       var email = document.getElementById("emailREG");
@@ -41,14 +42,7 @@
    
     const promise = auth.signInWithEmailAndPassword(email.value, password.value);
     promise.catch(e => alert(e.message));
-    // Show alert
-    document.querySelector('.alert').style.display = 'block';
-
-    // Hide alert after 3 seconds
-    setTimeout(function(){
-      document.querySelector('.alert').style.display = 'none';
-    },3000);
-
+    
     // Clear form
     document.getElementById('loginform').reset();
     promise.then(() => {
@@ -57,14 +51,13 @@
     });
   }
 
-
 function signOut() {
     firebase.auth().signOut().then(function () {
       console.log("you logged off");
   
      
    location.href = 'index.html';
-    }).catch(function (error) {
+    }) {
       alert(error);
     });
   }
