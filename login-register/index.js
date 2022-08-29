@@ -1,4 +1,4 @@
-  // Your web app's Firebase configuration
+    // Your web app's Firebase configuration
   const firebaseConfig = {
     apiKey: "AIzaSyB7bPblrzZGlWMblWaVi1V1BoTwh92XEXo",
     authDomain: "lasthome12-360f6.firebaseapp.com",
@@ -10,7 +10,9 @@
     measurementId: "G-NH3JX38VHB"
   };
   // Initialize Firebase
+  
   firebase.initializeApp(firebaseConfig);
+
 
   const auth = firebase.auth();
 
@@ -51,43 +53,43 @@
     });
   }
 
-function signOut() {
+  function signOutform() {
     firebase.auth().signOut().then(function () {
       console.log("you logged off");
   
      
    location.href = 'index.html';
-    }) {
+    }).catch(function (error) {
       alert(error);
     });
   }
-// auth.onAuthStateChanged(function(user){
-//     if(user){
-//         var email = user.email;
-//         alert("Active User " + email); 
-//     }else{
-//         alert("No Active User");
-//     }
-// });
-// $("#reset").click(function(){
-// var auth =firebase.auth();
-// var email =$("#FormEmailReset").val();
-// if(email!=""){
-//   auth.sendPasswordResetEmail(email).then(function(){
-//     window.alert("Email has been sent to you , Please check and verify");
-//   })
-//   .catch(function(){
-//     var errorCode = error.code;
-//     var errorMessage =error.message;
-//     console.log(errorCode);
-//     console.log(errorMessage);
-//     Window.alert("Message"+errorMessage);
-//   });
-// }
-// else{
-//   Window.alert("Please write your email first");
-// }
-// });
+auth.onAuthStateChanged(function(user){
+    if(user){
+        var email = user.email;
+        alert("Active User " + email); 
+    }else{
+        alert("No Active User");
+    }
+});
+$("#reset").click(function(){
+var auth =firebase.auth();
+var email =$("#FormEmailReset").val();
+if(email!=""){
+  auth.sendPasswordResetEmail(email).then(function(){
+    window.alert("Email has been sent to you , Please check and verify");
+  })
+  .catch(function(){
+    var errorCode = error.code;
+    var errorMessage =error.message;
+    console.log(errorCode);
+    console.log(errorMessage);
+    Window.alert("Message"+errorMessage);
+  });
+}
+else{
+  Window.alert("Please write your email first");
+}
+});
 
 function reset(){
   var auth =firebase.auth();
@@ -108,9 +110,6 @@ function reset(){
     Window.alert("Please write your email first");
   }
 }
-
-
-
 
 // navbar
 const $dropdown = $(".dropdown");
@@ -138,9 +137,7 @@ $(window).on("load resize", function() {
     $dropdown.off("mouseenter mouseleave");
   }
 });
-// end
-
-
+end
 
 
 

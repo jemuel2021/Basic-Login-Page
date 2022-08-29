@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!--<title>Admin Dashboard Panel</title>--> 
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    
+    
 </head>
 <body>
     <nav>
@@ -29,9 +33,9 @@
                     <i class="uil uil-estate"></i>
                     <span class="link-name">Dahsboard</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="content.html">
                     <i class="uil uil-files-landscapes"></i>
-                    <span class="link-name">Content</span>
+                    <span class="link-name" >Content</span>
                 </a></li>
                 <li><a href="#">
                     <i class="uil uil-chart"></i>
@@ -54,7 +58,7 @@
             <ul class="logout-mode">
                 <li><a href="#">
                     <i class="uil uil-signout"></i>
-                    <span class="link-name" onclick="signOut()" id="signOut">Logout</span>
+                    <span class="link-name" onclick="signOutform()" id="signOut">Logout</span>
                 </a></li>
 
                 <li class="mode">
@@ -171,11 +175,10 @@
         </div>
     </section>
 
-    <script src="mainpage.js"></script>
+    
     <script src="index.js"></script>
-    <script>
-        signOut();
     </script>
+    <script src="mainpage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
 </body>
